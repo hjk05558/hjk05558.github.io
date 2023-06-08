@@ -1,0 +1,558 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #1c1a26;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* --------------------------------------------------- */
+
+/* background */
+#background {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg, black 0%, #555 100%);
+	z-index: -1;
+}
+
+/* menu */
+#menu {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	background-color: rgba(255, 255, 255, 0.9	);
+	z-index: 9999;
+	overflow: hidden;
+}
+#menu_box {
+	width: 1200px;
+	height: 60px;
+	margin: 0 auto;
+}
+#menu_logo {
+	float: left;
+	width: 220px;
+	height: 60px;
+}
+#menu_logo > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#menu_logo > a > img {
+	margin-top: 5px;
+	height: 50px;
+}
+
+#menu_bar {
+	float: left;
+	width: 900px;
+}
+#menu_bar > ul {
+	width: 900px;
+}
+#menu_bar > ul::after { content: ""; display: block; clear: both;}
+#menu_bar > ul > li {
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+#menu_bar > ul > li > a {
+	font-size: 2em;
+	color: black;
+	font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+	transition-duration: 200ms;
+	line-height: 60px;
+}
+#menu_bar > ul > li > a:hover {
+	color: #ff6a00;
+	transition-duration: 200ms;
+}
+
+#english {
+	float: left;
+	width: 80px;
+	text-align: center;
+}
+#english > a > span {
+	font-size: 1.1em;
+	color: #222;
+	font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+	line-height: 60px;
+}
+#english > a > span:hover {
+	color: #777;
+}
+
+/* submenu */
+#submenu_background {
+	position: absolute;
+	padding-top: 80px;
+	width: 100%;
+	height: 240px;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 9999;
+	display: none;
+}
+.submenu {
+	position: absolute;
+	width: 300px;
+	height: 240px;
+	text-align: center;
+	display: none;
+}
+.submenu > li {
+	height: 40px;
+}
+.submenu > li > a {
+	font-size: 1.2em;
+	color: black;
+	line-height: 40px;
+	font-family: 'Noto Sans KR', sans-serif;
+	transition-duration: 200ms;
+}
+.submenu > li > a:hover {
+	color: #ff6a00;
+	transition-duration: 200ms;
+}
+
+/* main_banner */
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+#image-list {
+    width: 200%;
+    position: relative;
+    top: 0; left: 0;
+}
+#image-list { content: ""; display: block; clear: both;}
+#image-list > li {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+#image-list > li > img {
+    display: block;
+    height: 100%;
+}
+/* banner_text */
+.banner_text {
+	position: absolute;
+	left: 200px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.banner_text > span {
+	font-size: 4em;
+	font-weight: bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	display: block;
+}
+.banner_text > a {
+	display: block;
+	width: 200px;
+	margin-top: 20px;
+	border: 5px solid white;
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 45px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	transition-duration: 400ms;
+}
+.banner_text > a:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	transition-duration: 400ms;
+}
+
+#bullets-list {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3000;
+	width: 150px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 50px;
+}
+#bullets {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#bullets > li {
+    float: left;
+    margin: 0 8px;
+}
+#bullets > li > a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: transparent;
+
+    opacity: 0.2;
+    transition-duration: 600ms;
+}
+#bullets > li > a.on {
+    opacity: 1;
+}
+
+/* main_content */
+#main_content {
+	position: relative;
+	width: 100%;
+}
+#sub_banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	background-color: black;
+}
+#sub_banner > a {
+	display: block;
+	width: 1280px;
+	margin: 0 auto;
+}
+#sub_banner > a > img {
+	display: block;
+	height: 200px;
+}
+#poster {
+	position: relative;
+	width: 100%;
+	height: 750px;
+	/* background: url("../images/background_design.png"); */
+	background-size: 100% 100%;
+}
+#poster_box {
+	position: absolute;
+	width: 900px;
+	height: 570px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#poster_box_imgs {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#poster_box_imgs > img:nth-child(1) {
+	position: absolute;
+	width: 430px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+#poster_box_imgs > img:nth-child(2) {
+	position: absolute;
+	width: 370px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1200;
+}
+#poster_box_text {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#poster_box_text > h1 {
+	width: 100%;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 2em;
+	font-weight: bold;
+	border-bottom: 5px solid #ff6a00;
+	white-space: nowrap;
+}
+#poster_box_text > h2 {
+	margin-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 1.4em;
+	white-space: nowrap;
+}
+#poster_box_text > p {
+	margin-top: 10px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	font-size: 1.3em;
+	white-space: nowrap;
+}
+#poster_box_text > p > span {
+	display: inline-block;
+	width: 100px;
+	white-space: nowrap;
+}
+#poster_box_text > a {
+	position: absolute;
+	width: 170px;
+	height: 40px;
+	border: 5px solid #ff6a00;
+	bottom: 40px;
+	left: 30px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1.4em;
+	font-weight: bold;
+	transition-duration: 200ms;
+	white-space: nowrap;
+}
+#poster_box_text > a:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	transition-duration: 200ms;
+}
+#poster_before {
+    position: absolute;
+    width: 52px;
+    height: 91px;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%);
+    z-index: 1500;
+}
+#poster_before > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../images/before.png");
+    opacity: 0.5;
+    transition-duration: 300ms;
+}
+#poster_before > a:hover {
+    opacity: 1;
+    transition-duration: 300ms;
+}
+#poster_after {
+    position: absolute;
+    width: 52px;
+    height: 91px;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+    z-index: 1500;
+}
+#poster_after > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../images/next.png");
+    opacity: 0.5;
+    transition-duration: 300ms;
+}
+#poster_after > a:hover {
+    opacity: 1;
+    transition-duration: 300ms;
+}
+
+/* sub_content */
+#sub_content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+@keyframes circle {
+    from {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: -10px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+.circle {
+    animation-name: circle;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#sub_design1 {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: 50%;
+	left: -30px;
+	transform: translateY(-50%);
+	background: url("../images/circle.png");
+	background-size: 600px 600px;
+}
+#sub_design2 {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 450px;
+	left: 1350px;
+	background: url("../images/logo_gray.png");
+	background-size: 400px 400px;
+}
+#sub_content_box {
+    position: absolute;
+	width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sub_contents {
+	float: left;
+	width: 30%;
+	margin-left: 50px;
+}
+.sub_contents:first-child {
+	margin-left: 0;
+}
+.sub_content_head {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 5px solid #ff6a00;
+    box-sizing: border-box;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+	white-space: nowrap;
+}
+.sub_content_text {
+	position: relative;
+	margin-top: 80px;
+	height: 550px;
+    bottom: 0;
+    background: linear-gradient(0deg, #fe9900 0%, #ffb749 100%);
+    border-radius: 0 80px 0 80px;
+    box-shadow: 10px 10px 10px #333;
+	white-space: nowrap
+}
+.sub_content_text > h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+	white-space: nowrap
+}
+.sub_content_text > a {
+    position: absolute;
+    width: 30%;
+    height: 30px;
+    border: 5px solid #fbd59c;
+    line-height: 30px;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition-duration: 200ms;
+	white-space: nowrap
+}
+.sub_content_text > a:hover {
+    border: 5px solid #555;
+    color: #555;
+    transition-duration: 200ms;
+	white-space: nowrap
+}
+
+/* footer */
+#footer {
+    background-color: #111017;
+	margin-top: 50px;
+}
+#footer > p {
+    font-size: 1.5em;
+    font-weight: bold;
+	padding: 150px;
+	text-align: center;
+}
