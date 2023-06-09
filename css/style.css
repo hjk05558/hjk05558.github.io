@@ -335,10 +335,10 @@ ul,li {
     position: absolute;
     border: 3px solid white;
     width: 400px;
-    height: 550px;
+    height: 520px;
     z-index: 1200;
-    top: 10px;
-    left: 7px;
+    top: 20px;
+    left: 3px;
 }
 #profile_photo_photo {
     position: absolute;

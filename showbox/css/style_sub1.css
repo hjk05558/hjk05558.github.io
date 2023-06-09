@@ -247,6 +247,7 @@ ul,li {
 	border-radius: 35px;
 }
 #bar_input {
+	width: 180px;
 	border: none;
 	background-color: transparent;
 	position: absolute;

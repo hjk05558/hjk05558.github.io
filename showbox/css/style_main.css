@@ -90,7 +90,6 @@ ul,li {
 	height: 60px;
 	background-color: rgba(255, 255, 255, 0.9	);
 	z-index: 9999;
-	overflow: hidden;
 }
 #menu_box {
 	width: 1200px;
@@ -219,6 +218,7 @@ ul,li {
 .banner_text > span {
 	font-size: 4em;
 	font-weight: bold;
+	line-height: 1.2em;
 	font-family: 'Noto Sans KR', sans-serif;
 	display: block;
 }
@@ -284,18 +284,17 @@ ul,li {
 #sub_banner {
 	position: relative;
 	display: block;
-	width: 100%;
 	height: 200px;
 	overflow: hidden;
-	background-color: black;
 }
 #sub_banner > a {
 	display: block;
-	width: 1280px;
-	margin: 0 auto;
+	width: 100%;
+	background-color: black;
 }
 #sub_banner > a > img {
 	display: block;
+	margin: 0 auto;
 	height: 200px;
 }
 #poster {
@@ -340,6 +339,8 @@ ul,li {
 	float: left;
 	width: 50%;
 	height: 100%;
+	padding-top: 20px;
+	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.2);
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -367,6 +368,7 @@ ul,li {
 	box-sizing: border-box;
 	font-size: 1.3em;
 	white-space: nowrap;
+	line-height: 1.2em;
 }
 #poster_box_text > p > span {
 	display: inline-block;
